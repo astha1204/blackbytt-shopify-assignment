@@ -55,16 +55,16 @@ Ensures textarea visibility always matches actual cart total.
 ## 3. sections/main-cart-items.liquid
 
 ### Changes:
-Added code to display delivery note:
-{% if cart.attributes["Delivery Note"] != blank %}
+Added code to display delivery note on the Cart page:
 
-<div class="cart-delivery-note">
-  <h3>Delivery Note</h3>
-  <p>
-    {{ cart.attributes["Delivery Note"] }}
-  </p> </div> 
-  {% endif %}
-  ```
+```liquid
+{% if cart.attributes["Delivery Note"] != blank %}
+  <div class="cart-delivery-note">
+    <h3>Delivery Note</h3>
+    <p>{{ cart.attributes["Delivery Note"] }}</p>
+  </div>
+{% endif %}
+```
   Purpose:
 Shows saved delivery note on Cart page before checkout.
 
